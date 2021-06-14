@@ -1,0 +1,8 @@
+schema: test/graphql-api/typed-document-node.schema.graphql
+documents: test/graphql-api/typed-document-node.*.graphql
+generates:
+  test/graphql-api/typed-document-node.graphql-operations.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node

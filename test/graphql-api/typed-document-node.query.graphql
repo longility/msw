@@ -1,0 +1,7 @@
+query GetUserDetail($userId: String!) {
+  user {
+    id
+    firstName
+    age
+  }
+}

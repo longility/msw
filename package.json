@@ -19,6 +19,7 @@
     "test:smoke": "config/scripts/smoke.sh",
     "test:ts": "tsc -p test/typings/tsconfig.json",
     "test:focused": "node node_modules/ts-node/dist/bin.js --project=test/tsconfig.json test/focusedTest.ts",
+    "codegen:test": "graphql-codegen --config test/graphql-api/typed-document-node.codegen.yml",
     "prepublishOnly": "yarn lint && yarn test:unit && yarn build && yarn test:integration",
     "postinstall": "node -e \"try{require('./config/scripts/postinstall')}catch(e){}\""
   },
@@ -87,6 +88,11 @@
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
+    "@graphql-codegen/cli": "^1.21.5",
+    "@graphql-codegen/typed-document-node": "^1.18.6",
+    "@graphql-codegen/typescript": "^1.22.1",
+    "@graphql-codegen/typescript-operations": "^1.18.0",
+    "@graphql-typed-document-node/core": "^3.1.0",
     "@open-draft/test-server": "^0.2.3",
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-inject": "^4.0.2",
